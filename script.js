@@ -15,7 +15,7 @@ const fleetData = [
         registration: 'N638OD',
         type: 'P-38',
         color: 'Purple',
-        airports: ['KVCV', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB']
+        airports: ['KVCV', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4']
     },
     {
         registration: 'N639TF',
@@ -78,7 +78,6 @@ const airportCoords = {
     '01WY': { coords: [42.835, -106.307], name: 'Barnes Field' },
     'U85': { coords: [43.4919, -111.9042], name: 'Rexburg-Madison County Airport' },
     'KYKM': { coords: [46.5682, -120.543], name: 'Yakima Air Terminal' },
-    'CYYB': { coords: [46.3629, -79.4246], name: 'Jack Garland Airport' },
 };
 
 var map = L.map('map').setView([39.8283, -98.5795], 4);
