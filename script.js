@@ -17,8 +17,8 @@ const fleetData = [
         registration: 'N638OD',
         type: 'P-38',
         color: 'Purple',
-        airports: ['KVCV', 'KTEX', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB', 'CGN2'],
-        location: 'CGN2'
+        airports: ['KVCV', 'KTEX', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB', 'CGN2', 'CYMT'],
+        location: 'CYMT'
     },
     {
         registration: 'N639TF',
@@ -38,8 +38,8 @@ const fleetData = [
         registration: 'N597CD',
         type: 'Spitfire',
         color: 'mediumvioletred',
-        airports: ['KVCV', 'KCOS'],
-        location: 'KCOS'
+        airports: ['KVCV', 'KCOS', 'KBFF'],
+        location: 'KBFF'
     },
     {
         registration: 'N700QH',
@@ -89,6 +89,8 @@ const airportCoords = {
     'CYYB': { coords: [46.362976, -79.424633], name: 'Jack Garland Airport' },
     'KTEX': { coords: [37.953894, -107.901981], name: 'Telluride Regional Airport' },
     'CGN2': { coords: [48.432737, -74.521317], name: 'Pourvoirie Escapade Airport' },
+    'CYMT': { coords: [49.778041, -74.528568], name: 'Chapais Airport' },
+    'KBFF': { coords: [41.870490, -103.595258], name: 'Western Nebraska Airport' },
 };
 
 var map = L.map('map').setView([39.8283, -98.5795], 4);
