@@ -69,7 +69,7 @@ const airportCoords = {
     'KOGA': { coords: [41.1192, -101.7694], name: 'Searle Field' },
     'KFSD': { coords: [43.582, -96.7419], name: 'Sioux Falls Regional Airport' },
     'KVOK': { coords: [43.9397, -90.2534], name: 'Volk Field' },
-    'CNK4': { coords: [43.0231, -79.935], name: 'Brantford Airport' },
+    'CNK4': { coords: [45.252699, -79.829915], name: 'Parry Sound Airport' },
     'KMWM': { coords: [43.9124, -95.1097], name: 'Windom Municipal Airport' },
     'KIDP': { coords: [37.1587, -95.7777], name: 'Independence Municipal Airport' },
     'KHTS': { coords: [38.3667, -82.558], name: 'Tri-State Airport' },
