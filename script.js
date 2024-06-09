@@ -52,8 +52,8 @@ const fleetData = [
         registration: 'N831QP',
         type: 'XCub',
         color: 'orange',
-        airports: ['KYKM', 'U85', '01WY', 'KVOK'],
-        location: 'KVOK'
+        airports: ['KYKM', 'U85', '01WY', 'KVOK', 'CNK4'],
+        location: 'CNK4'
     }
 ];
 
