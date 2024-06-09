@@ -27,7 +27,7 @@ const fleetData = [
         registration: 'N508EI',
         type: 'C208',
         color: 'Dark Green',
-        airports: ['KIDP', 'KHTS']
+        airports: ['KIDP', 'KHTS', 'CNK4']
     },
     {
         registration: 'N597CD',
