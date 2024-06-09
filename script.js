@@ -17,8 +17,8 @@ const fleetData = [
         registration: 'N638OD',
         type: 'P-38',
         color: 'Purple',
-        airports: ['KVCV', 'KTEX', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB'],
-        location: 'CYYB'
+        airports: ['KVCV', 'KTEX', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB', 'CGN2'],
+        location: 'CGN2'
     },
     {
         registration: 'N639TF',
@@ -88,6 +88,7 @@ const airportCoords = {
     'KYKM': { coords: [46.5682, -120.543], name: 'Yakima Air Terminal' },
     'CYYB': { coords: [46.362976, -79.424633], name: 'Jack Garland Airport' },
     'KTEX': { coords: [37.953894, -107.901981], name: 'Telluride Regional Airport' },
+    'CGN2': { coords: [48.432737, -74.521317], name: 'Pourvoirie Escapade Airport' },
 };
 
 var map = L.map('map').setView([39.8283, -98.5795], 4);
