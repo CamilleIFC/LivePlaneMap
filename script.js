@@ -3,49 +3,57 @@ const fleetData = [
         registration: 'N797FM',
         type: 'Spitfire',
         color: 'Light red',
-        airports: ['KVCV', 'KLSV']
+        airports: ['KVCV', 'KLSV'],
+        location: 'KLSV'
     },
     {
         registration: 'N975XJ',
         type: 'Spitfire',
         color: 'Dark red',
-        airports: ['KVCV']
+        airports: ['KVCV'],
+        location: 'KVCV'
     },
     {
         registration: 'N638OD',
         type: 'P-38',
         color: 'Purple',
-        airports: ['KVCV', 'KTEX', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB']
+        airports: ['KVCV', 'KTEX', 'KCOS', 'KOGA', 'KFSD', 'KMWM', 'KOSH', 'CNK4', 'CYYB'],
+        location: 'CYYB'
     },
     {
         registration: 'N639TF',
         type: 'C208',
         color: 'Green',
-        airports: ['KIDP', 'CNK4']
+        airports: ['KIDP', 'CNK4'],
+        location: 'CNK4'
     },
     {
         registration: 'N508EI',
         type: 'C208',
         color: 'Dark Green',
-        airports: ['KIDP', 'KHTS', 'CNK4']
+        airports: ['KIDP', 'KHTS', 'CNK4'],
+        location: 'CNK4'
     },
     {
         registration: 'N597CD',
         type: 'Spitfire',
         color: 'mediumvioletred',
-        airports: ['KVCV', 'KCOS']
+        airports: ['KVCV', 'KCOS'],
+        location: 'KCOS'
     },
     {
         registration: 'N700QH',
         type: 'C172',
         color: 'mediumspringgreen',
-        airports: ['KIDP', 'KMBS', 'CNK4']
+        airports: ['KIDP', 'KMBS', 'CNK4'],
+        location: 'CNK4'
     },
     {
         registration: 'N831QP',
         type: 'XCub',
         color: 'orange',
-        airports: ['KYKM', 'U85', '01WY', 'KVOK']
+        airports: ['KYKM', 'U85', '01WY', 'KVOK'],
+        location: 'KVOK'
     }
 ];
 
@@ -119,7 +127,7 @@ fleetData.forEach(plane => {
                 if (marker) map.addLayer(marker);
             });
 
-            const currentLocation = airportCoords[plane.airports[plane.airports.length - 1]];
+            const currentLocation = airportCoords[plane.location];
             const airplaneIcon = airplaneIcons.find(icon => icon.getLatLng().equals(currentLocation.coords));
             if (airplaneIcon) map.addLayer(airplaneIcon);
 
@@ -132,8 +140,8 @@ fleetData.forEach(plane => {
 
     plane.airports.forEach(airport => {
         const { coords, name } = airportCoords[airport];
-        const isPlaneHere = plane.airports[plane.airports.length - 1] === airport;
-        const planeText = isPlaneHere ? plane.registration : 'No aircraft';
+        const planesAtAirport = fleetData.filter(p => p.location === airport);
+        const planeText = planesAtAirport.map(p => p.registration).join(', ');
         const marker = L.marker(coords)
             .bindPopup(`<b>${name}</b><br>ICAO: ${airport}<br>Planes: ${planeText}`)
             .addTo(map);
@@ -155,6 +163,7 @@ fleetData.forEach(plane => {
 
     airplaneIcons.push(airplaneMarker);
 });
+
 
 map.on('click', function () {
     resetMapView();
